@@ -1,0 +1,95 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+h1{
+    font-size: 45px;
+    font-family: 'Anton', sans-serif;
+    color:#2980b9;
+    margin-top:50px;
+    text-align: center;
+}
+h2{
+    font-size: 35px;
+    color:#2c3e50;
+    padding: 20px;
+    font-weight: bold;
+}
+h3{
+    font-size: 22px;
+    color:#2c3e50;
+    padding: 15px;
+}
+blockquote{
+    font-style: italic;
+    font-size: 120%;
+}
+strong{
+    font-weight: bold;
+
+}
+header{
+    background: #2c3e50;
+    height: 175px;
+}
+nav{
+    background :#2980b9;
+    height: 50px;
+}
+main{
+    background: #BE3144;
+}
+aside{
+    height: 250px;
+    background: #A6D6C3;
+}
+section{
+    margin-top: 50px;
+    background: #DAF7A6;
+    padding: 20px;
+}
+footer{
+    background: #2980b9;
+    height: 30px;
+}
+
+/**************DEBUT PAGE TEXTE********************/
+.oswald p{
+    font-family: 'Oswald', sans-serif;
+}
+
+/****************FIN PAGE TEXTE********************/
+
+/****************DEBUT PAGE SELECTEURS*************/
+.select p{
+    color: red;
+}
+.select p:first-of-type{
+    color: pink;
+}
+.select p:last-of-type{
+    color: pink;
+}
+.select p:nth-of-type(5), .select p:nth-of-type(6){
+    color:black;
+}
+.select div:not(.zoneB){
+    font-weight: bold;
+}
+/****************FIN PAGE SELECTEURS***************/
