@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,7 +56,9 @@ nav{
     height: 50px;
 }
 main{
-    background: #BE3144;
+    background: lightgrey;
+    width: 1000px;
+    margin: 0 auto;
 }
 aside{
     height: 250px;
@@ -61,7 +66,7 @@ aside{
 }
 section{
     margin-top: 50px;
-    background: #DAF7A6;
+    /*background: #DAF7A6;*/
     padding: 20px;
 }
 footer{
@@ -73,8 +78,8 @@ footer{
 .oswald p{
     font-family: 'Oswald', sans-serif;
 }
-
 /****************FIN PAGE TEXTE********************/
+
 
 /****************DEBUT PAGE SELECTEURS*************/
 .select p{
@@ -92,4 +97,193 @@ footer{
 .select div:not(.zoneB){
     font-weight: bold;
 }
+.select .zoneA{
+    color: #f56f56;
+}
+.select .zoneB{
+    color: #996633;
+}
+.select .zoneB .couleurBleu{
+    color: blue;
+    font-size: 16px;
+}
+.select #zoneC{
+    color: #98f32f;
+}
+.select #zoneD span{
+    color: #32ff32;
+    font-size: 30px;
+    font-style: italic;
+}
 /****************FIN PAGE SELECTEURS***************/
+
+
+/****************DEBUT PAGE IMAGE********************/
+.imageFond{
+    background:#000 url(../img/fond.jpg) no-repeat;
+    background-size: cover;
+}
+.imageFond p{
+    width: 75%;
+    margin: 100px auto 200px auto;
+    background: rgba(255,255,255,0.60);
+    padding: 20px;
+    font-size: 120%;
+    border-radius: 10px;
+}
+img[src="img/toureiffel.jpg"]{
+    margin:auto;
+    width: 250px;
+    display:block;
+}
+.rotationImg{
+    text-align: center;
+}
+.image{
+    margin: 20px;
+    border: 5px solid #eee;
+/*rgba sera utiliser dans ce cas pour cree une ombre à mon image*/
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    transition: 1s;
+}
+.image:hover{
+    transform: rotate(-7deg);
+    border: 15px solid #eee;
+}
+.rotation360:hover{
+    transform: rotate(-360deg);
+}
+/********************FIN PAGE IMAGE******************/
+
+
+/********************DEBUT PAGE POSITION******************/
+/*********ABSOLUTE********/
+.centre{
+    margin: 0 auto;
+    width: 500px;
+    height: 200px;
+    background: #33cccc;
+}
+.absolute{
+    position:absolute;
+    top:10%;
+    left: 10%;
+    background: orange;
+    width: 100px;
+    height: 100px;
+}
+/*******RELATIVE*******/
+.relative{
+    background: #2D5C7F;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    bottom: 10px;
+    left: 100px;
+}
+.relative div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: #FFF1A8;
+}
+button{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    cursor:pointer;
+    border: none;
+    background: transparent;
+    font-size: 350%;
+    color: black;
+}
+.trente{
+    width: 30%;
+    padding: 20px;
+    font-size: 22px;
+    background: #3C1B1F;
+    color: #F6E1B5;
+    font-weight: bold;
+}
+.cinquante{
+    width: 50%;
+    padding: 20px;
+    font-size: 22px;
+    background: #B21E4B;
+    color: #E2BF81;
+    font-weight: bold;
+    margin-top: 7px;
+}
+.cent{
+    width: 100%;
+    padding: 20px;
+    font-size: 22px;
+    background: #E2BF81;
+    color: #B21E4B;
+    font-weight: bold;
+    margin-top: 7px;
+}
+/********************FLOAT*****************************/
+.float{
+    height: 170px;
+    width: 170px;
+    margin: 10px;
+    padding-top: 2px;
+    float: left;
+    text-align: center;
+    font-size: 25px;
+    background: #F8D771;
+    border: 2px solid darkred;
+}
+.dernier{
+    height: 170px;
+    width: 170px;
+    margin: 10px;
+    padding-top: 2px;
+    text-align: center;
+    font-size: 25px;
+    background: #F8D771;
+    border: 2px solid darkred;
+}
+
+.clear{
+    clear: both;
+}
+/******************Exercice Float *********************/
+.zone{
+    height: 70px;
+    background: #3a4750;
+}
+.zone1, .zone2, .zone3, .zone4{
+    height: 250px;
+    width: 25%;
+    float: left;
+}
+.zone1{
+    background: #2D5C7F
+;
+}
+.zone2{
+    background: #FFF1A8;
+}
+.zone3{
+    background: #FF8F56;
+}
+.zone4{
+    background: #984A59;
+}
+
+/***********************FLEXBOX*************************/
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.flex div{
+    width: 150px;
+    height: 150px;
+    background: darkblue;
+}
+
+/********************FIN PAGE POSITION******************/
