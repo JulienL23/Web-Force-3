@@ -21,6 +21,9 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+body{
+    background-image: url(../img/concrete-texture.png);
+}
 h1{
     font-size: 45px;
     font-family: 'Anton', sans-serif;
@@ -33,11 +36,14 @@ h2{
     color:#2c3e50;
     padding: 20px;
     font-weight: bold;
+    text-shadow: 1px 1px 2px #aaa;
 }
 h3{
     font-size: 22px;
     color:#2c3e50;
     padding: 15px;
+    text-shadow: 1px 1px 2px #aaa;
+    text-align: center;
 }
 blockquote{
     font-style: italic;
@@ -54,6 +60,7 @@ header{
 nav{
     background :#2980b9;
     height: 50px;
+    border-bottom: 8px solid #6ACAFC;
 }
 main{
     background: lightgrey;
@@ -278,12 +285,237 @@ button{
 /***********************FLEXBOX*************************/
 .flex{
     display: flex;
+    /*justify-content: space-around;*/
     justify-content: space-between;
+    /*flex-direction: column;*/
+    /*flex-direction: row-reverse;*/
 }
 .flex div{
     width: 150px;
     height: 150px;
     background: darkblue;
+    text-align: center;
+    font-size: 50px;
+    color:white;
+}
+/********************FIN PAGE POSITION******************/
+
+
+/************************ZONING*************************/
+/***********************Zoning 1************************/
+#zoning1{
+    background: #ffd6d6;
+    width: 800px;
+    text-align: center;
+    text-shadow: 1px 1px 2px darkgrey;
+    margin: auto;
+}
+#zoning1 header{
+    height: 70px;
+    background: #F7F39A;
+}
+#zoning1 aside{
+    height: 525px;
+    float: left;
+    width: 20%;
+    background: #A3DE83;
+}
+#zoning1 section{
+    float: left;
+    background: #38817A;
+    height: 525px;
+    width: 80%;
+    margin:0;
+    padding: 0;
 }
 
-/********************FIN PAGE POSITION******************/
+/**********************Zoning 2 ************************/
+#zoning2{
+    /*On aurais pu taper "zoning2" directement dans le CSS de "zoning1" à la suite sans oublier la virgule*/
+    background: #ffd6d6;
+    width: 500px;
+    text-align: center;
+    text-shadow: 1px 1px 1px darkgrey;
+    margin: auto;
+}
+#zoning2 header{
+    height: 70px;
+    background: #F8F5E4
+;
+}
+#zoning2 aside{
+    height: 525px;
+    float: left;
+    width: 20%;
+    background: #10828C;
+    color: white;
+}
+#zoning2 .middle{
+    float: left;
+    background: #0E3047;
+    height: 525px;
+    width: 60%;
+    margin:0;
+    padding: 0;
+    color: white;
+}
+/**********************Zoning 3*************************/
+#zoning3{
+    background: #ffd6d6;
+    width: 800px;
+    text-align: center;
+    text-shadow: 1px 1px 2px darkgrey;
+    color: white;
+    margin: auto;
+}
+#zoning3 section{
+    height: 525px;
+    float: left;
+    width: 50%;
+    background:#205D67;
+    margin: 0;
+    padding: 0;
+}
+#zoning3 footer{
+    height: 70px;
+    float: left;
+    width: 100%;
+    background: #D8EBB5;
+    color: black;
+}
+#zoning3 section:nth-of-type(2){
+    background: #639A67;
+}
+/**********************Zoning 4************************/
+#zoning4{
+    background: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 2px darkgrey;
+    border: 2px solid black;
+    margin: 0 auto;
+    width: 700px;
+}
+#zoning4 header{
+    height: 90px;
+    background: #D8DFE2;
+}
+#zoning4 nav{
+    height: 50px;
+    background: #71ADB5;
+
+
+}
+#zoning4 section{
+    height: 500px;
+    background: #176D81;
+    margin: 20px;
+    padding: 0;
+}
+#zoning4 footer{
+    height: 75px;
+    background: #0D3446;
+}
+#zoning4 section, footer{
+    color: white;
+}
+/**********************Zoning 5*************************/
+#zoning5{
+    background: #ECEBE9;
+    text-align: center;
+    text-shadow: 1px 1px 2px darkgrey;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+#zoning5 header{
+    height: 90px;
+    background: #F8D771;
+}
+#zoning5 nav{
+    height: 50px;
+    background: #D6BC6B;
+    border-bottom: 8px solid #C19718;
+}
+#zoning5 .section{
+
+    background: #176D81;
+    margin: 20px;
+    padding: 0;
+}
+#zoning5 .section .z1, .z2, .z3, .z4{
+    height: 250px;
+    width: 50%;
+    float: left;
+}
+#zoning5 .z1, .z4{
+    background: #D6BC6B;
+}
+#zoning5 .z2, .z3{
+    background: #FCE38A;
+}
+#zoning5 footer{
+    height: 75px;
+    background: #F8D771;
+}
+#zoning5 section, footer{
+    color: black;
+}
+/***********************Zoning 6************************/
+#zoning6{
+    background: #ECEBE9;
+    text-align: center;
+    text-shadow: 1px 1px 2px darkgrey;
+    margin: 0 auto;
+}
+#zoning6 header{
+    height: 90px;
+    background: #F8D771;
+}
+#zoning6 .div1{
+    background: red;
+    float: left;
+    width: 25%;
+    height: 150px;
+}
+#zoning6 .div2{
+    background: blue;
+    float: left;
+    width: 50%;
+    height: 150px;
+}
+
+#zoning6 nav{
+    height: 50px;
+    background: #D6BC6B;
+    border: none;
+}
+#zoning6 aside{
+    height: 800px;
+    width: 20%;
+    background: yellow;
+    float: left;
+}
+#zoning6 .div3{
+    background: darkgreen;
+    float: left;
+    width: 50%;
+}
+#zoning6 .div3:nth-of-type(2){
+    background: green;
+}
+#zoning6 section{
+    height: 300px;
+    float: left;
+}
+#zoning6 .div4, .div5{
+    width: 25%;
+    background: red;
+}
+#zoning6 .div4{
+    background: blue;
+}
+#zoning6 footer{
+    height: 50px;
+    background: #F8D771;
+}
+
+/***********************FIN ZONING**********************/
