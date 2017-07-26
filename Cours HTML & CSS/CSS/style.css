@@ -53,10 +53,41 @@ strong{
     font-weight: bold;
 
 }
+/**************HEADER INDEX****************/
 header{
     background: #2c3e50;
     height: 175px;
+    margin-top: 25px;
 }
+#logo{
+    float: left;
+    width: 25%;
+    background: #2c3e50;
+    padding: 15px;
+    text-align: center;
+}
+#slogan{
+    float: left;
+    width: 50%;
+    background: #2c3e50;
+}
+#social{
+    float: left;
+    width: 25%;
+}
+#social i{
+    background: #2c3e50;
+    font-size: 30px;
+    text-align: right;
+    padding: 15px 30px 0 0;
+    display: block;
+}
+header a{
+    color: #10828C;
+    text-decoration: none;
+}
+/*FAIRE LE ZONING AVEC DES HAUTEUR ET LARGEUR AVANT DE PLACER LES ELEMENTS DANS LES ZONES POUR ENSUITE SUPPRIMER LES HAUTEURS*/
+/*******************FIN HEADER*********************/
 nav{
     background :#2980b9;
     height: 50px;
@@ -461,61 +492,103 @@ button{
 }
 /***********************Zoning 6************************/
 #zoning6{
-    background: #ECEBE9;
-    text-align: center;
-    text-shadow: 1px 1px 2px darkgrey;
+    width: 800px;
     margin: 0 auto;
+    color: white ;
+    text-align: center;
 }
 #zoning6 header{
-    height: 90px;
-    background: #F8D771;
+    background: #40a497;
+    height: 180px;
 }
-#zoning6 .div1{
-    background: red;
+.haut1{
     float: left;
     width: 25%;
-    height: 150px;
+    height: 100%;
+    background: #203562;
 }
-#zoning6 .div2{
-    background: blue;
+.haut2{
     float: left;
     width: 50%;
-    height: 150px;
+    height: 100%;
+    background: #3E588F;
 }
-
+.haut3{
+    float: left;
+    width: 25%;
+    height: 100%;
+    background: #203562;
+}
 #zoning6 nav{
-    height: 50px;
-    background: #D6BC6B;
+    background: #0B5269;
+    height: 30px;
     border: none;
 }
 #zoning6 aside{
-    height: 800px;
+    background:#446878;
     width: 20%;
-    background: yellow;
+    height: 650px;
     float: left;
-}
-#zoning6 .div3{
-    background: darkgreen;
-    float: left;
-    width: 50%;
-}
-#zoning6 .div3:nth-of-type(2){
-    background: green;
+
 }
 #zoning6 section{
-    height: 300px;
+    width: 80%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.slideshow{
+    background: #314A52;
+    height: 250px;
+}
+#zoning6 .a{
+    background: #C0C5CD;
+    width: 50%;
+    height: 250px;
     float: left;
 }
-#zoning6 .div4, .div5{
-    width: 25%;
-    background: red;
+#zoning6 .b{
+    background: #203562;
+    width: 50%;
+    height: 250px;
+    float: left;
 }
-#zoning6 .div4{
-    background: blue;
+#zoning6 .c, .e{
+    background: #C0C5CD;
+    width: 25%;
+    height: 150px;
+    float: left;
+}
+#zoning6 .d, .f{
+    background: #203562;
+    width: 25%;
+    height: 150px;
+    float: left;
 }
 #zoning6 footer{
+    background: #0B5269;
     height: 50px;
-    background: #F8D771;
+    color: white ;
 }
 
 /***********************FIN ZONING**********************/
+/*************************TABLEAU***********************/
+table{
+    border-collapse:collapse;
+    border: 2px solid darkblue;
+    width: 100%;
+    font-weight: bold;
+}
+th{
+    border: 1px solid blue;
+    width: 25%;
+}
+td{
+    border: 1px solid blue;
+    font-size: 100%;
+    text-align: center;
+    padding: 5px;
+}
+caption{
+    font-size: 25px;
+}
