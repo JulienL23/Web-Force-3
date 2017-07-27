@@ -23,12 +23,13 @@ time, mark, audio, video {
 }
 body{
     background-image: url(../img/concrete-texture.png);
+    /*Effet de scroll lorsqu'on clique sur une ancre mais ne marche que sur FireFox
+    scroll-behavior: smooth;*/
 }
 h1{
     font-size: 45px;
     font-family: 'Anton', sans-serif;
     color:#2980b9;
-    margin-top:50px;
     text-align: center;
 }
 h2{
@@ -43,7 +44,6 @@ h3{
     color:#2c3e50;
     padding: 15px;
     text-shadow: 1px 1px 2px #aaa;
-    text-align: center;
 }
 blockquote{
     font-style: italic;
@@ -57,7 +57,6 @@ strong{
 header{
     background: #2c3e50;
     height: 175px;
-    margin-top: 25px;
 }
 #logo{
     float: left;
@@ -94,7 +93,7 @@ nav{
     border-bottom: 8px solid #6ACAFC;
 }
 main{
-    background: lightgrey;
+    background: rgba(178,178,178,0.30);
     width: 1000px;
     margin: 0 auto;
 }
@@ -235,7 +234,7 @@ button{
     border: none;
     background: transparent;
     font-size: 350%;
-    color: black;
+    color: #2c3e50;
 }
 .trente{
     width: 30%;
@@ -573,13 +572,14 @@ button{
 
 /***********************FIN ZONING**********************/
 /*************************TABLEAU***********************/
-table{
+.tableau table{
     border-collapse:collapse;
-    border: 2px solid darkblue;
-    width: 100%;
+    border: 2px solid #6495ed;
     font-weight: bold;
+    margin: auto;
+    width: 80%;
 }
-th{
+/*th{
     border: 1px solid blue;
     width: 25%;
 }
@@ -588,7 +588,88 @@ td{
     font-size: 100%;
     text-align: center;
     padding: 5px;
+}*/
+.tableau thead, .tableau tfoot{
+    background: #d0e3fa;
+    border: 1px solid #6495ed;
 }
-caption{
-    font-size: 25px;
+.tableau tbody{
+    border: 1px solid #6495ed;
 }
+.tableau th{
+    border: 1px solid #6495ed;
+    padding: 5px;
+    width: 20%;
+}
+.tableau td{
+    border: 1px solid #6495ed;
+    font-size: 80%;
+    padding: 5px;
+    text-align: center;
+}
+
+/***************************FIN****************************/
+/***************************LISTE************************/
+ul.fruit{
+    list-style: none;
+}
+ul.fruit li{
+    display: inline;
+    margin: 15px;
+
+}
+li .fa{
+    font-size: 90%;
+    color: blue;
+}
+li .fa:hover{
+    font-size: 150%;
+    color: darkred;
+}
+.imbriquee, .imbriquee ul{
+    padding-left: 15px;
+}
+.imbriquee{
+    cursor: pointer;
+}
+.imbriquee ul{
+    display: none;
+}
+.europe:hover ul, .asie:hover ul{
+    display: block;
+}
+.imbriquee li ul li:hover{
+        font-size: 200%;
+        background: #E74C3C;
+        display: inline;
+        box-shadow: 5px 10px 10px grey;
+        transition-duration: 1s;
+}
+
+
+/**************************FIN LISTE************************/
+/****************************LIEN***************************/
+/************************styliser les liens*****************/
+.ancre{
+    text-align: center;
+}
+.ancre a{
+    margin: 8px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background:  #2c3e50;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0px 0px 10px 3px black;
+    font-family: oswald;
+}
+.ancre a:hover{
+    box-shadow: none;
+    transition-duration: 0.5s;
+    text-shadow: 1px 5px 10px grey;
+}
+#lien a{
+    text-decoration: none;
+}
+/**************************FIN LIEN************************/

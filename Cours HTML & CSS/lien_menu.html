@@ -2,11 +2,11 @@
 <html lang="fr">
     <head>
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Ma page Selecteur</title>
+        <title>Ma page lien</title>
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Anton|Lemonada|Oswald" rel="stylesheet">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-        <meta name="description" content="Mes selecteurs en HTML/CSS">
+        <meta name="description" content="Mes lien en HTML/CSS">
         <meta charset="UTF-8">
     </head>
 
@@ -18,7 +18,7 @@
                 <a href="#logo">
                     <button type="button"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
                 </a>
-                <img src="img/logo.png" alt="logo">
+                    <img src="img/logo.png" alt="logo">
             </div>
             <div id="slogan"><h1>Mon premier site en HTML/CSS</h1></div>
             <div id="social">
@@ -37,25 +37,27 @@
 
         </nav>
         <main>
-            <h2>Selecteurs</h2>
-            <section class="select">
-                <h3>Les selecteurs</h3>
-                <p>texte n° 1</p>
-                <p>texte n° 2</p>
-                <p>texte n° 3</p>
-                <p>texte n° 4</p>
-                <p>texte n° 5</p>
-                <p>texte n° 6</p>
-                <p>texte n° 7</p>
-                <p>texte n° 8</p>
-                <p>texte n° 9</p>
-                <p>texte n° 10</p>
-
-                <div class="zoneA">Zone A</div>
-                <div class="zoneB">Zone B Zone B <span class="couleurBleu"> /!\texte/!\</span>Zone B Zone B</div>
-                <div id="zoneC">Zone C</div>
-                <div id="zoneD">Zone <span>D</span></div>
+            <h2>Liens & menus</h2>
+            <div class="ancre">
+                <a href="#lien">Les liens</a>
+                <a href="#menu">Menu</a>
+                <a href="#menuDeroulant">Menu déroulant</a>
+            </div>
+            <section id="lien">
+                <h3>Les liens</h3>
+                <!--Dans le lien nous aurons aussi (title="xxx") pour ouvrir fenêtre d'info au passage de la souris sur le lien et (target="_blank") pour envoyer sur un autre onglet"-->
+                <a href="https://codepen.io" title="Se rendre sur le site de CodePen" target="_blank">CodePen</a> is a social development environment for front-end designers and developers.<br>
+                <a href="http://www.google.fr" target="_blank">Google</a> le moteur de recherche.<br>
             </section>
+            <section id="menu">
+                <h3>Les menu</h3>
+
+            </section>
+            <section id="menuDeroulant">
+                <h3>Les menu déroulant</h3>
+
+            </section>
+
         </main>
         <footer>
 

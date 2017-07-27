@@ -15,6 +15,9 @@
 
         <header>
             <div id="logo">
+                <a href="#logo">
+                    <button type="button"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
+                </a>
                 <img src="img/logo.png" alt="logo">
             </div>
             <div id="slogan"><h1>Mon premier site en HTML/CSS</h1></div>
@@ -35,7 +38,7 @@
         </nav>
         <main>
             <h2>Tableau</h2>
-            <section>
+            <section class="tableau">
             <table>
                 <caption><i class="fa fa-plane" aria-hidden="true"></i>Vols Paris Rome</caption>
                 <thead>
@@ -46,6 +49,14 @@
                         <td>05/08/2017</td>
                     </tr>
                 </thead>
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <td>02/08/2017</td>
+                        <td>03/08/2017</td>
+                        <td>05/08/2017</td>
+                    </tr>
+                </tfoot>
                 <tbody>
                     <tr>
                         <th rowspan="2">Air France</th>
@@ -70,14 +81,6 @@
                         <td>100€</td>
                     </tr>
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <th></th>
-                        <td>02/08/2017</td>
-                        <td>03/08/2017</td>
-                        <td>05/08/2017</td>
-                    </tr>
-                </tfoot>
             </table>
         </section>
 
