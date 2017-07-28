@@ -31,6 +31,7 @@ h1{
     font-family: 'Anton', sans-serif;
     color:#2980b9;
     text-align: center;
+    letter-spacing: 1px;
 }
 h2{
     font-size: 35px;
@@ -69,6 +70,7 @@ header{
     float: left;
     width: 50%;
     background: #2c3e50;
+    padding-top: 50px;
 }
 #social{
     float: left;
@@ -85,13 +87,38 @@ header a{
     color: #10828C;
     text-decoration: none;
 }
-/*FAIRE LE ZONING AVEC DES HAUTEUR ET LARGEUR AVANT DE PLACER LES ELEMENTS DANS LES ZONES POUR ENSUITE SUPPRIMER LES HAUTEURS*/
+
 /*******************FIN HEADER*********************/
-nav{
+/**************DEBUT NAV********************/
+nav {
     background :#2980b9;
-    height: 50px;
+    height: 70px;
     border-bottom: 8px solid #6ACAFC;
+    text-align: center;
+    padding: 15px;
 }
+nav a{
+    margin: 10px;
+    padding: 2px 10px;
+    border-radius: 10px 0px;
+    border : 2px solid white;
+    background:  #6ACAFC;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: oswald;
+    transition: 0.5s;
+}
+nav a:hover{
+    background: #A6D6C3;
+    color: white;
+}
+.activ{
+    background: #2c3e50;
+    color: white ;
+}
+/**************FIN NAV********************/
+/*FAIRE LE ZONING AVEC DES HAUTEUR ET LARGEUR AVANT DE PLACER LES ELEMENTS DANS LES ZONES POUR ENSUITE SUPPRIMER LES HAUTEURS*/
 main{
     background: rgba(178,178,178,0.30);
     width: 1000px;
@@ -203,7 +230,7 @@ img[src="img/toureiffel.jpg"]{
 }
 .absolute{
     position:absolute;
-    top:10%;
+    top:24%;
     left: 10%;
     background: orange;
     width: 100px;
@@ -648,8 +675,8 @@ li .fa:hover{
 
 
 /**************************FIN LISTE************************/
-/****************************LIEN***************************/
-/************************styliser les liens*****************/
+/***************LIEN & MENU*****************/
+/****************styliser les liens************/
 .ancre{
     text-align: center;
 }
@@ -671,5 +698,86 @@ li .fa:hover{
 }
 #lien a{
     text-decoration: none;
+    color: #2980b9;
+    display: inline-block;
+    margin-bottom: 15px;
 }
-/**************************FIN LIEN************************/
+#lien a:hover{
+    color: #f16529;
+}
+/****************MENU*********************/
+#menu nav{
+    background: transparent;
+    border: none;
+}
+#menu ul{
+    list-style: none;
+    text-align: center;
+}
+#menu ul li{
+    display: inline-block;
+}
+#menu nav a{
+    padding: 10px;
+    color: grey;
+    text-decoration: none;
+    background: #ddd;
+    transition: 1s ease-in;
+}
+#menu nav a:hover{
+    color: #fff;
+    background: #069;
+}
+
+/****************FIN LIEN & MENU******************/
+/***************FORMULAIRE*******************/
+form{
+    width: 60%;
+    background: #2c3e50;
+    margin: 0 auto;
+    padding: 20px;
+    color: #ecf0f1;
+    border-radius: 15px;
+}
+label{
+    margin:10px 0;
+    width: 50%;
+    display: inline-block;
+}
+textarea{
+    resize: none;
+}
+label[for="orange"], label[for="fraise"], label[for="poire"]{
+    width: 13%;
+}
+
+/***************FIN FORMULAIRE***************/
+/***************DEBUT MULTIMEDIA***************/
+.videoFond{
+    padding-left: 0;
+    padding-right: 0;
+}
+.videoFond video{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+.videoTexte{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.videoFond p{
+    position: absolute;
+    z-index: 2;
+    width: 500px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.60);
+    left: 250px;
+    top: 100px;
+    padding: 20px;
+    font-size: 120%;
+    border-radius: 10px;
+}
+
+/***************FIN MULTIMEDIA***************/
