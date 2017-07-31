@@ -46,6 +46,10 @@ h3{
     padding: 15px;
     text-shadow: 1px 1px 2px #aaa;
 }
+h4{
+    text-align: center;
+    margin-top: 30px;
+}
 blockquote{
     font-style: italic;
     font-size: 120%;
@@ -635,7 +639,7 @@ td{
     text-align: center;
 }
 
-/***************************FIN****************************/
+/**********************FIN TABLEAU***********************/
 /***************************LISTE************************/
 ul.fruit{
     list-style: none;
@@ -728,6 +732,45 @@ li .fa:hover{
     color: #fff;
     background: #069;
 }
+        /*****Menu Déroulant*****/
+#menuDeroulant{
+    height: 650px;
+}
+#menuDeroulant nav{
+    background: transparent;
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+}
+#menuDeroulant nav ul li{
+    float: left;
+    list-style: none;
+    width: 20%;
+}
+#menuDeroulant ul ul{
+    display: none;
+}
+#menuDeroulant nav ul li ul li {
+    border-top: 1px solid #464646;
+    width: 100%;
+}
+#menuDeroulant nav li {
+    background: #ccc;
+}
+#menuDeroulant nav li a{
+    text-decoration: none;
+    color: #000;
+    padding: 4px 0 4px;
+    display: block;
+}
+#menuDeroulant ul{
+    text-align: center;
+}
+#menuDeroulant nav ul.niveau1 li.sousMenu:hover ul.niveau2{
+    display: block;
+    color: red;
+}
+
 
 /****************FIN LIEN & MENU******************/
 /***************FORMULAIRE*******************/
@@ -774,10 +817,190 @@ label[for="orange"], label[for="fraise"], label[for="poire"]{
     margin: auto;
     background: rgba(255, 255, 255, 0.60);
     left: 250px;
-    top: 100px;
+    top: 150px;
     padding: 20px;
     font-size: 120%;
     border-radius: 10px;
 }
 
-/***************FIN MULTIMEDIA***************/
+iframe[src="https://www.youtube.com/embed/MHYWgf3VqoY"]{
+    width: 100%;
+}
+.audio{
+    text-align: center;
+}
+iframe[allowfullscreen]{
+    width: 100%;
+}
+
+/**************FIN MULTIMEDIA***************/
+/**************DEBUT ANIMATIONS*************/
+      /*****infoBulle*****/
+.infoBulle{
+    height: 250px;
+    width: 500px;
+    margin: auto;
+    padding-top: 15px;
+    background: #444;
+    box-shadow: 0 0 50px #222 inset/*inset permet l'effet à l'intérieur de l'élément*/
+}
+.infoBulle p{
+    text-align: center;
+    padding-top: 30px;
+}
+.infoBulle a{
+    color: #ccc;
+    text-shadow: 0 -2px 0 black;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 5px 15px;
+}
+.infoBulle a:hover{
+    text-shadow: 0 1px 2px black;
+    background: rgba(0,0,0,.4);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+    color: #fff;
+}
+.infoBulle a span{
+    position: absolute;
+    padding: 15px;
+    margin-top: 23px;
+    margin-left: -35px;
+    background: rgba(0,0,0,.9);
+    opacity: 0;
+    color: #09c;
+    transform: scale(0) rotateZ(-12deg);
+    transition: .25s;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,.5);
+}
+.infoBulle a:hover span{
+    opacity: 1;
+    transform: scale(1) rotateZ(0);
+}
+.infoBulle a span:before{
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    border-bottom: 6px solid rgba(0,0,0,.9);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+      /*****image grayscale & blur*****/
+.imgEffets{
+    width: 302px;
+    height: 320px;
+    margin: 70px auto;
+}
+.imgEffets li{
+    list-style: none;
+    float: left;
+    width: 141px;
+    height: 150px;
+    margin: 5px;
+}
+.imgEffets li:nth-child(3){
+    clear: both;
+}
+.imgEffets img{
+    position: absolute;
+    z-index: 1;
+    height: 150px;
+    box-shadow: 0 0 3px black;
+    /* cubic-bezier commence par 0 et se termine par 1 puis entre nous mettrons nos valeurs*/
+    transition: .5s cubic-bezier(0,3,.4,1);
+}
+.imgEffets li:hover img{
+    z-index: 2;
+    /* Scale = zoom */
+    transform: scale(1.5);
+    box-shadow: 0 0 10px black;
+}
+.imgEffets:hover li:not(:hover) img{
+    filter: grayscale(1) blur(5px);
+}
+     /******Rotation d'un menu CSS3*******/
+#menuRotate{
+    height: 360px;
+    width: 576px;
+    margin: 100px auto;
+    background: #627878;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid white;
+}
+#menuRotate .masque{
+    position: absolute;
+    z-index: 50;
+    width: 585px;
+    height: 135px;
+    top: 0;
+    left: 0;
+    background:linear-gradient(#324040,#627878);
+}
+#menuRotate .ombre{
+    position: absolute;
+    z-index: 40;
+    width: 300px;
+    height: 6px;
+    box-shadow: 0px 100px 3px black;
+    border-radius: 75px 75px 75px 75px / 3px 3px 3px 3px; /*rayon horizontaux / Rayon verticaux*/
+    top: 30px;
+    left: 142px;
+}
+#menuRotate dl{
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    height: 155px;
+    color: #324040;
+    text-align: center;
+    background: #04b3d2;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.7);
+    transform-origin: 50% 120px;
+    animation: bounceOut 0.7s ease-in-out;
+}
+#menuRotate dt{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 23px;
+    padding-top: 5px;
+
+}
+#menuRotate dd{
+    transform: rotate(180deg);
+}
+#menuRotate dd a{
+    display: block;
+    height: 24px;
+    padding: 3px 0;
+    color: #324040;
+    text-decoration: none;
+}
+#menuRotate dd a:hover{
+    background: rgba(255,255,255,0.1);
+}
+#menuRotate dl:hover{
+    transform: rotate(-180deg);
+    animation: bounceIn 0.7s ease-in-out;
+}
+@keyframes bounceIn{
+    from{transform:rotate(0deg);}
+    75%{transform:rotate(-200deg);}
+    90%{transform:rotate(-175deg);}
+    to{transform:rotate(-180deg);}
+}
+@keyframes bounceOut{
+    from{transform:rotate(0deg);}
+    0%{transform:rotate(-180deg);}
+    10%{transform:rotate(-165deg);}
+    to{transform:rotate(-360deg);}
+}
+
+/**************FIN ANIMATIONS***************/
