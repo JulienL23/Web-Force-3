@@ -61,7 +61,7 @@ strong{
 /**************HEADER INDEX****************/
 header{
     background: #2c3e50;
-    height: 175px;
+    /*height: 175px;*/
 }
 #logo{
     float: left;
@@ -96,7 +96,7 @@ header a{
 /**************DEBUT NAV********************/
 nav {
     background :#2980b9;
-    height: 70px;
+    /*height: 70px;*/
     border-bottom: 8px solid #6ACAFC;
     text-align: center;
     padding: 15px;
@@ -122,7 +122,9 @@ nav a:hover{
     color: white ;
 }
 /**************FIN NAV********************/
+/*****STRUCTURE*****/
 /*FAIRE LE ZONING AVEC DES HAUTEUR ET LARGEUR AVANT DE PLACER LES ELEMENTS DANS LES ZONES POUR ENSUITE SUPPRIMER LES HAUTEURS*/
+
 main{
     background: rgba(178,178,178,0.30);
     width: 1000px;
@@ -1004,3 +1006,60 @@ iframe[allowfullscreen]{
 }
 
 /**************FIN ANIMATIONS***************/
+/*****************RESPONSIVE****************/
+
+/***reponsive header ***/
+@media screen and (max-width:580px){
+body[background-image]{
+    display: none;
+    width: 100%;
+}
+button{
+    display: none;
+}
+header{
+    background: #2c3e50;
+    width: 100%;
+}
+#logo{
+    float: left;
+    width: 100%;
+    background: #2c3e50;
+    padding: 15px;
+    text-align: center;
+}
+#slogan{
+    float: left;
+    width: 100%;
+    background: #2c3e50;
+    padding-top: 50px;
+}
+#social{
+    float: left;
+    width: 100%;
+}
+
+header a{
+    color: #10828C;
+    text-decoration: none;
+}
+/***reponsive nav ***/
+nav {
+    background :#2980b9;
+    /*height: 70px;*/
+    border-bottom: 8px solid #6ACAFC;
+    text-align: center;
+    padding: 15px;
+}
+nav a{
+    display:block;
+}
+/***Multimedia***/
+main{
+    width: 100%;
+}
+.audio{
+    text-align: center;
+    width: 100%;
+}
+}
