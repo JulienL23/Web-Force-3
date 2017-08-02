@@ -1010,8 +1010,7 @@ iframe[allowfullscreen]{
 
 /***reponsive header ***/
 @media screen and (max-width:580px){
-body[background-image]{
-    display: none;
+body{
     width: 100%;
 }
 button{
@@ -1059,7 +1058,6 @@ main{
     width: 100%;
 }
 .audio{
-    text-align: center;
-    width: 100%;
+    text-align: left;
 }
 }
