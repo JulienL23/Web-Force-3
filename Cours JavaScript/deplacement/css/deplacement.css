@@ -1,8 +1,10 @@
-.carre{
+@charset "UTF-8";
+
+#block{
+    width: 101px;
+    height: 101px;
+    background: #f60;
     position: absolute;
-    height: 150px;
-    width: 150px;
-    background: red;
-    top: 100px;
-    left: 10px;
+    top : 100px;
+    left : 100px;
 }
