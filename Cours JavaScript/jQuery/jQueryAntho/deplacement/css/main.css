@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+#block {
+	width : 101px;
+	height : 101px;
+	background : #F60;
+	position : absolute;
+	top : 100px;
+	left : 100px;
+}
