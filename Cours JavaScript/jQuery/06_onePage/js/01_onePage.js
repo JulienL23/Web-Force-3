@@ -21,6 +21,7 @@ $ (function () {
     });
 
     $(document).on("scroll", function(e){
+        if ($("html, body").is(":animated") == false) { //vérifie que html, body ne sont pas en cours d'animation
         var pageIndex = $(document).scrollTop() / $(window).height();// on récupère la position du scroll au chargement de la page
         if ($(document).scrollTop() > lastScrollPos){
             //l'utilisateur a défilé vers le bas
@@ -30,15 +31,15 @@ $ (function () {
             $("html, body").animate({scrollTop : pagePosition});
 
         } else {
-            var pageIndex = $(document).scrollTop() / $(window).height();
             pageIndex = Math.floor(pageIndex);
 
 
         }
         var pagePosition = $(".page").eq(pageIndex).position().top;
-        $("html, body").animate({scrollTop : pagePosition});
-
-        lastScrollPos = $(document).scrollTop(); // on met à jour la dernière position du scroll
-    });
-    /****** EXECUTION *******/
+        $("html, body").animate({scrollTop : pagePosition}, function() {
+            lastScrollPos = $(document).scrollTop(); // on met à jour la dernière position du scroll
+        });
+    }
+});
+/****** EXECUTION *******/
 });

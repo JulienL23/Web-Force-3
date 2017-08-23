@@ -1,0 +1,29 @@
+@charset "UTF-8";
+* {
+   padding : 0;
+   margin : 0;
+   border : 0 none;
+   outline : 0 none;
+}
+
+img {
+   max-width: 100%;
+}
+
+.item {
+   width : 20%;
+}
+
+.item img {
+   width: 100%;
+}
+.item img:hover {
+   transform: scale(1);
+}
+
+#wrapper{
+
+width: 900px;
+height: 1200px;
+margin: auto;
+}

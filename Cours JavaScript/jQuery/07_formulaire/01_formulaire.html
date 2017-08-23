@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulaire</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/01_formulaire.css">
+    <!-- libs - JS -->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/01_formulaire.js"></script>
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/iris.min.js"></script>
+
+</head>
+<body>
+    <form>
+        <h2>HTML natif</h2>
+        <input type="date">
+
+        <input type="datetime-local">
+
+        <input type="month">
+
+        <input type="color">
+
+        <input type="range">
+    </form>
+
+    <form>
+        <h2>jQuery UI</h2>
+        <input type="text" id="date-field"><!-- input type date -->
+
+        <input type="text" id="color-field"><!-- input type color (plugin Iris)-->
+
+        <div id="range-field"></div><!-- input type range -->
+    </form>
+</body>
+</html>
