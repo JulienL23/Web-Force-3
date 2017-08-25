@@ -65,7 +65,21 @@
 
         <article class="page" id="skill">
             <div class="skill-content">
-
+                <h2>Compétences</h2>
+                <p>
+                    <span><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                    <a href="#"> Web <span class="span">Maîtrise du PackOffice. <br>---<br>Maîtrise des langages : "Html5", "Css3", "Javascript", "Php", "Sql", "Ajax". <br>---<br>Quelques notions sur "FruityLoops", "Photoshop", "Blender".</span></a><span><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                </p>
+                <br>
+                <p>
+                    <span><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                    <a href="#">Logistique & Gestion <span class="span">Contrôle qualité <br>---<br>Contrôle quantité <br>---<br>Compte rendu<br>---<br>Gestion des stocks</span></a><span><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                </p>
+                <p>
+                    <span><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                    <a href="#">Vente<span class="span">Relationnel client <br>---<br>Patience <br>---<br>Techniques de ventes</span></a><span>
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                </p>
             </div>
         </article>
 
@@ -85,6 +99,8 @@
                 <br>
                 <h2>Expériences profesionnelle</h2>
                 <ul>
+                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> LePoleS(Stagiaire intégrateur/développeur Web) Juin 2017 à Avril 2018</li>
+                    <br>
                     <li><i class="fa fa-caret-right" aria-hidden="true"></i> Maisons du monde(Visuel et Logistique) Juin 2015 à juin 2017.</li>
                     <br>
                     <li><i class="fa fa-caret-right" aria-hidden="true"></i> Monoprix(Logistique et vente) 6mois CDD en 2014.</li>
@@ -98,13 +114,12 @@
             </div>
             <div class="cv dos">
                 <h2>Informatique</h2>
-                <ul>
+                <ul class="div">
                     <li><span class="sous-t">Langages :</span></li>
                     <ul>
                         <li><i class="fa fa-caret-right" aria-hidden="true"></i> HTML5</li>
                         <li><i class="fa fa-caret-right" aria-hidden="true"></i> CSS3</li>
                         <li><i class="fa fa-caret-right" aria-hidden="true"></i> Javascript</li>
-                        <li><i class="fa fa-caret-right" aria-hidden="true"></i> jQuery ( + UI)</li>
                         <li><i class="fa fa-caret-right" aria-hidden="true"></i> PHP</li>
                         <li><i class="fa fa-caret-right" aria-hidden="true"></i> SQL</li>
                         <li><i class="fa fa-caret-right" aria-hidden="true"></i> AJAX</li>
@@ -113,6 +128,15 @@
                         <li><i class="fa fa-caret-right" aria-hidden="true"></i> Audacity</li>
                     </ul>
                 </ul>
+                <ul class="div">
+                    <li><span class="sous-t">Librairies :</span></li>
+                    <ul>
+                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> jQuery</li>
+                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> jQuery UI</li>
+                    <li><i class="fa fa-caret-right" aria-hidden="true"></i> Bootstrap</li>
+                    </ul>
+                </ul>
+                <div class="clear"></div>
                     <h2>Divers</h2>
                     <ul class="div">
                         <li><span class="sous-t">Langues :</span></li>
@@ -122,7 +146,7 @@
                         </ul>
                     </ul>
                     <ul class="div">
-                        <li><span class="sous-t">Loisirs</li>
+                        <li><span class="sous-t">Loisirs :</li>
                             <ul>
                                 <li><i class="fa fa-caret-right" aria-hidden="true"></i> Informatique</li>
                                 <li><i class="fa fa-caret-right" aria-hidden="true"></i> Jeux Vidéo</li>
@@ -137,11 +161,53 @@
             </article>
 
         <article class="page" id="work">
-
+            <div class="work-content">
+                <h2>Travaux</h2>
+                <p>Patience ! <i class="fa fa-hand-spock-o" aria-hidden="true"></i></p>
+            </div>
         </article>
 
         <article class="page" id="contact">
+            <div class="contact-content">
+                <h2>Contact</h2>
+                <br>
+                <div class="contact-div">
+                    <ul>
+                        <li>Julien LEDOUX</li>
+                        <li>3, Allée des rosiers</li>
+                        <li>92230 Gennevilliers</li>
+                        <li>06.73.44.60.55</li>
+                        <li>xxx@gmail.com</li>
+                        <li>23/01/1993</li>
+                        <li>Véhiculé</li>
+                    </ul>
+                </div>
+                <div class="trait"></div>
+                <div class="contact-div">
+                    <section class="formulaire">
+           <form method="post">
 
+               <label for="prenom">Nom *</label>
+               <input type="text" id="nom" name="nom" placeholder="Nom"><br><br>
+
+               <label for="mdp">Prénom *</label>
+               <input type="text" id="prenom" name="prenom" placeholder="Prénom"><br><br>
+
+               <label for="email">Email *</label>
+               <input type="email" id="email" name="email" placeholder="Email"><br><br>
+
+               <label for="cp">Code Postal</label>
+               <input type="text" id="cp" name="cp" maxlength="5" pattern="[0-9] {5}" title="5 chiffres entre 0 et 9"
+               placeholder="CP"><br><br>
+
+               <label for="message">Message</label>
+               <textarea id="message" name="message" rows="5" cols="25"></textarea>
+
+               <input class="bouton" type="submit" name="envoyer" value="Envoyer">
+              
+           </form>
+                </div>
+            </div>
         </article>
     </main>
     <footer id="fin">
