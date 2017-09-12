@@ -67,9 +67,10 @@ h1{
 }
 /****Logo****/
 .logo img{
-    height: 99px;
-    width: 99px;
+    height: 80px;
+    width: 80px;
     float: left;
+    padding: 1vh;
 }
 .logo h1{
     font-size: 60px;
@@ -122,9 +123,9 @@ h2 {
     float: left;
 }
 .image1 img{
-    width: 380px;
-    height: 380px;
-    padding-left: 185px;
+    width: 320px;
+    height: 320px;
+    padding: 4vh 23vh;
 }
 .bref-content2{
     width: 98%;
