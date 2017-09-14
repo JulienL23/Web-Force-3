@@ -292,4 +292,204 @@
 		Succès : XXXXXXX (STR)
 		Echec : FALSE (BOOL)
 	*/
+
+	echo "<h2>Les fonctions utilisateurs : </h2>";
+
+	//Les fonctions utilisateurs nous permettent d'effectuer des traitements qui ne sont pas prédéfinies dans le langage. Elles sont d'abord déclarées puis éxécutées.
+
+	// 1/ Fonction pour afficher 'Bonjour':
+	// Déclaration :
+	function bonjour(){
+		// traitements / instructions...
+		echo 'Bonjour !';
+	}
+		// Exécution :
+	bonjour();
+
+	echo "<br />";
+
+	// 2/ Fonction pour afficher 'Bonjour Chuck' :
+	// Déclaration :
+	function bonjourPrenom($arg){
+		echo "Bonjour" . $arg . " !<br/>";
+	}
+	// Exécution :
+	bonjourPrenom('Tyson');
+	bonjourPrenom('Jordan');
+
+	$prenom = 'Jacky';
+	bonjourPrenom($prenom);
+
+	// 3/ Fonction pour afficher un titre H2 :
+
+	//Déclaration :
+	function titre($arg) {
+		echo '<h2>' . $arg . '</h2>';
+	}
+
+	// 4/ Fonction pour appliquer la TVA à un prix HT :
+
+	//Déclaration :
+	function appliqueTva($prixHt){
+		return $prixHt * 1.2;
+	}
+
+	// Exécution :
+	$montantHt = 164;
+	$montantTtc = appliqueTva($montantHt);
+
+	echo 'Le montant de votre commande hors taxes, ' . $montantHt . '€ HT revient à ' . appliqueTva($montantHt) . '€ TTC !<br/>';
+
+	echo "Le montant de votre commande hors taxes, $montantHt €CT revient à $montantTtc €TTC !<br/>";
+
+	//Exercice :
+
+	//Créer une fonction applique TVA 2, qui va nous retourner un prix TTC, converti soit avec un taux de 20% (1.2) soit 10% (1.1) soit 5.5% (1.055).
+
+	// ----------------> Une fonction peut reçevoir 2 arguments ou plus...
+
+
+	function appliqueTva2($prix, $taux){
+		return $prix * $taux;
+	}
+
+	$montantHt = 23;
+	$tva = 1.055;
+	echo appliqueTva2($montantHt, $tva);
+
+	titre("Inclusions de fichier");
+	// Les inclusions permettent d'inclure des fichiers. Exemple : On peut inclure des parties communes d'un site (compartiment_site), on peut également inclure du code PHP.
+
+	//include() : S'il y a une erreur sur le fichier inclus, cela affiche les erreurs, et continue le script.
+
+	//require() : S'il y a une erreur sur le fichier inclus, cela affiche les erreurs, et stop l'éxécution du script.
+
+	//include_once() : Même include(), mais si le fichier est inclus plusieurs fois, il ne l'affichera qu'une seule fois.
+
+	//require_once() : Même require(), mais si le fichier est inclus plusieurs fois, il ne l'affichera qu'une seule fois.
+
+	titre('Structure iterative : Les boucles ');
+
+	//BOUCLE -- While :
+
+	$i = 0;
+	while($i < 3){
+		//traitements à effectuer
+		echo $i . '---';
+		$i ++;
+	}
+
+	echo "<br/><br/>";
+
+	//Exercice : Faire la même chose qui affiche : 0---1---2
+
+	$i = 0;
+	while($i < 3){ //$i = 0 // $i = 1 // $i = 2
+
+		if ($i < 2) { // $i = 0 // $i = 1
+			echo $i . '---';
+		}
+		else { // $i = 2
+			echo $i;
+		}
+		$i ++;
+	}
+
+	echo "<br/><hr/>";
+	//BOUCLE -- for :
+
+	for($i = 0; $i < 3; $i++){
+	    echo $i . '---';
+	}
+
+	echo '<br/><hr/>';
+	// Exercice 1 : Afficher de 0 à 9 grâce à boucle for (0123456789)
+	// Exercice 2 : Afficher de 0 à 9 dans un tableau
+
+	echo '<table border="1">';
+	echo ' <tr>';
+	for($i = 0; $i < 10; $i++){
+	    echo '<td>' . $i . '</td>';
+	}
+	echo ' </tr>';
+	echo ' </table>';
+
+	//Exercice 3 : Afficher un tableau avec 10 lignes allant de 0 à 99 (chaque ligne 0-9 // 10-19 ... 90 à 99).
+
+	titre('Tableaux de données ARRAY');
+	// un tableau de données array, est déclaré un peu comme une variable améliorée, car on ne conserve pas qu'une seule valeurs mais plusieurs.Les valeurs seront classées ...
+
+	$liste = array('Yakine', 'Hadi', 'Myriem', 'Corinne', 'Pascal');
+
+	//echo $liste; // ERREUR : On ne peux pas faire un echo sur un array.
+
+
+	//print_r sert a afficher un array(tableau)
+	echo '<pre>';
+	print_r($liste);
+	echo '</pre>';
+
+	titre('Les boucles foreach pour les ARRAY');
+	// les boucles foreach sont un moyen simple de passer en revue un tableau de données array.Foreach fonctionne UNIQUEMENT avec les arrays (et les objets).
+
+	$tab[] = "France";
+	$tab[] = "Espagne";
+	$tab[] = "Italie";
+	$tab[] = "Angleterre";
+	$tab[] = "Portugal";
+
+	echo '<pre>';
+	print_r($tab);
+	echo "</pre>";
+
+	echo $tab[2];
+	$tab[1] = "Suisse";
+	$tab[] = "Allemagne";
+
+	echo '<pre>';
+	print_r($tab);
+	echo "</pre>";
+
+	echo "<br/>";
+
+	echo 'Boucle foreach : <br/>';
+	foreach ($tab AS $valeur) { //Le foreach se comporte comme un curseur qui va parcourir tous les éléments d'un array. Le mot AS fait partie du langage et est OBLIGATOIRE. $valeur va contenir à chaque tour de boucle la valeur trouvée dans l'array.
+		echo $valeur . '<br/>';
+	}
+
+	echo "<br/>";
+
+	foreach ($tab as $indice => $valeur) { // S'il y a deux variables ($indice => $valeur) dans les paramètres de la boucle foreach, le premier parcourt les indices et le second parcourt les valeurs.
+		echo 'A l\'indice : ' . $indice . ' se trouve la valeur : ' . $valeur . '<br/>';
+	}
+
+	// Création d'un array avec indices choisis :
+
+	$couleur = array(
+		"couleur1" => "Jaune",
+		"couleur2" => "Rouge",
+		"couleur3" => "Vert",
+	);
+
+	echo '<pre>';
+	print_r($couleur);
+	echo "</pre>";
+
+	titre('Tableau multidimentionnel');
+
+	$tab_multi = array(
+		0 => array(
+			'prenom' => 'Hadi',
+			'nom' =>'Smail'
+		),
+		1 => array(
+			'prenom' => 'Meryem',
+			'nom' => 'Boularouk'
+		)
+	);
+
+	echo '<pre>';
+	print_r($tab_multi);
+	echo "</pre>";
+
 ?>
