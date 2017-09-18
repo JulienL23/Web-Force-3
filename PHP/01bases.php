@@ -280,7 +280,7 @@
 
 	$texte = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
-	substr(); // substring() (sub string) nous retourne une partie d'une CC.
+	substr($texte, 0, 40) .'...<a href="#">Lire la suite</a>'; // substring() (sub string) nous retourne une partie d'une CC.
 
 	/*
 	3 arguments :
@@ -404,8 +404,15 @@
 
 	echo '<br/><hr/>';
 	// Exercice 1 : Afficher de 0 à 9 grâce à boucle for (0123456789)
-	// Exercice 2 : Afficher de 0 à 9 dans un tableau
+//------------------------------------------------------
+	for($i = 0; $i < 10; $i++){
+		echo '<td>' . $i . '</td>';
+	}
 
+	echo '<br/><hr/>';
+
+	// Exercice 2 : Afficher de 0 à 9 dans un tableau
+//----------------------------------------------------
 	echo '<table border="1">';
 	echo ' <tr>';
 	for($i = 0; $i < 10; $i++){
@@ -414,7 +421,32 @@
 	echo ' </tr>';
 	echo ' </table>';
 
+	echo "<br /><hr/>";
+
 	//Exercice 3 : Afficher un tableau avec 10 lignes allant de 0 à 99 (chaque ligne 0-9 // 10-19 ... 90 à 99).
+//------------------------------------------------------------
+	echo '<table border="1">';
+		for ($i=0; $i <= 9 ; $i++) {
+			echo "<tr>";
+			for ($j=0; $j <= 9; $j++) {
+				echo '<td>' . ($i * 10 + $j) . '</td>';
+			}
+			echo "</tr>";
+		}
+	echo '</table>';
+	echo '<br/>';
+//------------------------------------------------------------
+	//>Modulo
+	echo '<table border="1">';
+		echo "<tr>";
+			for ($i=0; $i <= 99 ; $i++) {
+				if ($i%10 == 0) {
+					echo '</tr><tr>';
+				}
+				echo '<td>' . $i . '</td>';
+			}
+		echo "</tr>";
+	echo '</table>';
 
 	titre('Tableaux de données ARRAY');
 	// un tableau de données array, est déclaré un peu comme une variable améliorée, car on ne conserve pas qu'une seule valeurs mais plusieurs.Les valeurs seront classées ...
@@ -491,5 +523,7 @@
 	echo '<pre>';
 	print_r($tab_multi);
 	echo "</pre>";
+
+
 
 ?>
