@@ -19,7 +19,7 @@ foreach($fichier as $indice => $valeur){
 	$position = strpos($valeur, ' - ');
 	
 	$pseudo = substr($valeur, 0 , $position);
-	$email = substr($valeur, $position+1);
+	$email = substr($valeur, $position+3);
 	
 	echo '<h5>Inscrit N°' . ($indice +1) . '</h5>';
 	echo "Pseudo : " . $pseudo . '<br/>';
