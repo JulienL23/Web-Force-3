@@ -1,7 +1,7 @@
 <?php
 
 
-if(!empty($_POST)){ // est-ce que le formulaire a �t� activ�.
+if(!empty($_POST)){ // est-ce que le formulaire a ete active.
 
 	if(empty($_POST['pseudo'])){
 		echo '<p style="background:red; color: white; padding: 5px">Veuillez renseigner un pseudo ! </p>';
@@ -43,7 +43,7 @@ echo 'Pomme';
 echo 'Poire';
 } elseif (!$a || $b > 42) {
 echo 'Abricot';
-} 
+}
 ?>
 <!DOCTYPE html>
 <html>
