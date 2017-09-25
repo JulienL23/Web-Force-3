@@ -1,15 +1,11 @@
 <?php
 
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
+if(!empty($_POST)){
 
-// faire la connection avec la base de données
-
-
-
-// faire en sorte que le formulaire envoi les informations
-
+    echo '<pre>';
+    print_r($_POST);
+    echo '</pre>';
+}
 
 ?>
 
@@ -20,11 +16,11 @@ echo '</pre>';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formulaire</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <h2>Informations</h2>
+        <fieldset  style="width:223px">
+            <legend>Informations</legend>
         <form class="form" name= "formulaire" method="post">
             <label>Nom *</label><br/>
             <input type="text" name="nom" ><br/><br/>
@@ -36,7 +32,7 @@ echo '</pre>';
             <input type="text" name="telephone" maxlength="10"><br/><br/>
 
             <label>Profession</label><br/>
-            <input type="text" name="telephone" ><br/><br/>
+            <input type="text" name="profession" ><br/><br/>
 
             <label>Ville</label><br/>
             <input type="text" name="ville" ><br/><br/>
@@ -48,16 +44,48 @@ echo '</pre>';
             <textarea name="adresse" rows="8" cols="15"></textarea><br/><br/>
 
             <label>Date de Naissance</label><br/>
-            <select name="date_de_naissance"></select><br/><br/>
+            <!------------JOUR---------------->
+            <select name="jour">
+				<?php
+				for($i = 1; $i <= 31; $i++){
+					echo '<option>' . substr('0'.$i, -2) . '</option>';
+				}
+				?>
+			</select>
+            <!-------------MOIS-------------->
+			<select name="mois">
+				<option>Janvier</option>
+				<option>Février</option>
+				<option>Mars</option>
+				<option>Avril</option>
+				<option>Mai</option>
+				<option>Juin</option>
+				<option>Juillet</option>
+				<option>Aout</option>
+				<option>Septembre</option>
+				<option>Octobre</option>
+				<option>Novembre</option>
+				<option>Decembre</option>
+			</select>
+            <!-----------ANNEE-------------->
+			<select name="annee">
+				<?php
+					$i = date('Y') - 15;
+					while($i >= 1900 ){
+						echo '<option>' . $i . '</option>';
+						$i --;
+					}
+				?>
+			</select><br/><br/>
 
             <label>Sexe</label><br/>
-            <label>Homme</label>
-            <input type="checkbox" name="sexe" value="homme">
-            <label>Femme</label>
+            <label name="homme">Homme</label>
+            <input type="checkbox" name="sexe" value="homme" checked>
+            <label name="femme">Femme</label>
             <input type="checkbox" name="sexe" value="femme"><br/><br/>
 
             <input type="submit" value="enregistrement">
-
+            </fieldset>
         </form>
     </div>
 </body>
