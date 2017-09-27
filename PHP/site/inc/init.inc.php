@@ -17,4 +17,4 @@ $msg ='';
 
 // AUTRES INCLUSIONS
 require('fonctions.inc.php');
- ?>
+?>
