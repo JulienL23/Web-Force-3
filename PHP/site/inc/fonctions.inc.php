@@ -24,3 +24,13 @@ function userConnecte(){
     }
 }
 // Cette fonction nous retourne TRUE si l'utilisateur est connecté et false, s'il ne l'est pas.
+
+// Fonction pour voir si l'utilisateur est admin :
+function userAdmin(){
+    if (userConnecte() && $_SESSION['membre']['statut'] == 1) {
+        return TRUE;
+    }else{
+        return FALSE;
+    }
+}
+// Si l'utilisateur est connecté... et en plus si son statut c'est 1 alors il a les droits d'admin et pourra accéder au backoffice.

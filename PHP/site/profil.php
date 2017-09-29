@@ -6,6 +6,8 @@ if (!userConnecte()) {
 }
 extract($_SESSION['membre']);
 
+
+$page = 'Profil';
 require_once('inc/header.inc.php');
  ?>
 

@@ -1,7 +1,7 @@
 <?php
 require_once('inc/init.inc.php');
 // traitement pour la déconnexion :
-if(isset($_GET['action']) && $_GET['action'] == 'deconnexion'){
+if(isset($_GET['action']) && $_GET['action'] == 'deconnexion'){//Si une action est demandée dans l'url... et que cette action est "déconnexion" alors on procède à la déconnexion.
     unset($_SESSION['membre']);
     header('location:connexion.php');
 }
@@ -49,7 +49,7 @@ if (userConnecte()) {
         }
     }
 
-
+$page = 'Connexion';
 require_once('inc/header.inc.php');
 ?>
 

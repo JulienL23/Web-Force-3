@@ -113,6 +113,7 @@ $adresse = (isset($_POST['adresse'])) ? $_POST['adresse'] : '';
 $ville = (isset($_POST['ville'])) ? $_POST['ville'] : '';
 $code_postal = (isset($_POST['code_postal'])) ? $_POST['code_postal'] : '';
 
+        $page = 'Inscription';
         require_once('inc/header.inc.php');
         ?>
         <!-- CONTENU HTML -->

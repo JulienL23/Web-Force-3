@@ -4,15 +4,15 @@ body{ font-family : verdana; font-size: 12px; }
 a{ text-decoration: none; color: #000; }
 .conteneur{ margin: 0 auto; max-width: 1170px; }
 /**************************************************** HAUT ************************************************/
-header { background: #F09872; padding: 5px; text-align: center; }
+header { background: #F09872; padding: 23px; text-align: center; }
 header  span{ color: #fff; font-weight: bold; text-transform: uppercase; margin-right: 5%; }
 header  nav{ display: inline; }
-header  a{ color: #ffffff; text-decoration: none; padding: 5px 5px; }
+header  a{ color: #ffffff; text-decoration: none; padding: 23px 5px; }
 header  nav  a:hover, a.active{ background: #F46060; }
 /**************************************************** MILIEU ************************************************/
 section{ padding: 30px; min-height: 800px; }
 /**************************************************** BAS ************************************************/
-footer{ background: #F09872; color: white; text-align: center; padding: 7px 0;}
+footer{ background: #F09872; color: white; text-align: center; padding: 6px 0;}
 /**************************************************** GENERAL ************************************************/
 .erreur{ background: #ff0000; padding: 5px; margin: 5px; color: white;}
 .validation{ background: #669933; padding: 5px; margin: 5px; }
@@ -39,12 +39,30 @@ footer{ background: #F09872; color: white; text-align: center; padding: 7px 0;}
 
 
 
+/***********************************************GESTION DE BOUTIQUE********************************************/
+
+.btn-add{
+	padding: 3px 10px;
+	font-size: 20px;
+	border: 3px solid black;
+	background: #f09872;
+}
+.btn-add:hover{
+	background: #F46060;
+	color: white;
+	transition: .5s;
+}
+
+
 /**************************************************** Formulaire ************************************************/
 form{
 	margin-top: 20px;
 	padding: 20px;
 	background : silver;
 	overflow: hidden;
+	background: #f3d179;
+    border-radius: 10px;
+	box-shadow: 0px 0px 23px 10px #f09872;
 }
 
 form label{
@@ -54,6 +72,7 @@ form label{
 	line-height: 40px;
 	vertical-align: middle;
 	margin-top: 10px;
+	font-size: 15px;
 }
 
 form input, form select, form textarea{
@@ -66,6 +85,7 @@ form input, form select, form textarea{
 	text-indent: 20px;
 	border: none;
 	border: 1px solid white;
+	border-radius: 10px;
 }
 
 form input[type='file']{
@@ -75,7 +95,7 @@ form input[type='file']{
 	padding-left: 5%;
 	width:65%;
 	height: 30px;
-	background-color: grey;
+	background-color: #DCE8BA;
 }
 
 form textarea{
@@ -94,12 +114,13 @@ form input[type='submit']{
 
 form input[type='submit']:hover{
 	cursor: pointer;
+
 }
 
 form input[type="submit"]{
-	border : 2px solid grey;
+	border : 2px solid #f09872;
 	background : transparent;
-	color: grey;
+	color: #f09872;
 	font-weight: bold;
 	border-radius : 3px;
 	padding: 10px;
@@ -113,7 +134,8 @@ form input[type="submit"]{
 }
 
 form input[type="submit"]:hover{
-	background-color: grey;
+	border : 2px solid white;
+	background-color: #f09872;
 	color: white;
 	transition: 1.5s;
 
