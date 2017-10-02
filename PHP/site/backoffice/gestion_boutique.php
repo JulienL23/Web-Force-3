@@ -35,7 +35,7 @@ foreach ($produit as $valeur) {//parcout tous les enregistrements
                 $contenu .= '<td>' . $valeur2 . '</td>';
             }
         }
-        $contenu .= '<td><a href=""><img src="../img/edit.png"></a></td>';
+        $contenu .= '<td><a href="formulaire_produit.php?id=' . $valeur['id_produit'] . '"><img src="../img/edit.png"></a></td>';
         $contenu .= '<td><a href="supprime_produit.php?id=' . $valeur['id_produit'] .'"><img src="../img/delete.png"></a></td>';
 
     $contenu .= '</tr>';

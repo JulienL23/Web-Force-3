@@ -14,9 +14,9 @@ $pdo = new PDO('mysql:host=localhost;dbname=tchat', 'root', '', array(
 	PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING
 ));
 
-// echo '<pre>';
-// print_r($_SESSION);
-// echo '</pre>';
+ echo '<pre>';
+ print_r($_SESSION);
+ echo '</pre>';
 
 //traitement pour la déconnexion
 if (isset($_GET['action']) && $_GET['action'] == 'deconnexion') {
