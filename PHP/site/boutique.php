@@ -70,6 +70,7 @@ require('inc/header.inc.php');
 		<!-- href="fiche_produit.php?id=id_du_produit" -->
 	</div>
 	<!-- Fin vignette produit -->
+
 <?php endforeach; ?>
 </div>
 <?php

@@ -24,7 +24,7 @@ footer{ background: #F09872; color: white; text-align: center; padding: 6px 0;}
 .boutique-gauche{ float: left; width: 30%; background: #f2f2f2; min-height: 500px; margin-right: 10%; padding-top: 10px; text-align: center; }
 .boutique-gauche  ul{ list-style: none; padding: 0; }
 .boutique-gauche  ul  li  a{ display: block; padding: 10px; }
-.boutique-gauche  ul  li  a:hover{ background: #04baf6; color: #fff; }
+.boutique-gauche  ul  li  a:hover{ background: #f46060; color: #fff; }
 .boutique-droite{float: left; width: 60%; }
 .boutique-produit{ float: left; width: 30%; text-align: center; padding: 5%; border-bottom: 1px solid #c0c0c0; }
 .profil .boutique-produit{

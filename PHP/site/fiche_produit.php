@@ -3,7 +3,7 @@
 require_once('inc/init.inc.php');
 
 // creationPanier();
-// debug($_SESSION);
+debug($_SESSION);
 
 // 1 : On va vérifier qu'il y a bien un id dans l'URL(no vide, numeric)
 // 2 : On récupère les infos du produit
@@ -37,7 +37,7 @@ if (!empty($_POST)) {
 	// Fonction codé dans le fichier fonctions.php
 }
 
-debug($_SESSION);
+
 
 $page = 'Boutique';
 require_once('inc/header.inc.php');

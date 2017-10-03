@@ -68,3 +68,59 @@ function ajouterProduit($id_produit, $quantite, $photo, $titre, $prix){
     // le crochet vide permet de stocker la valeur au prochain indice disponible...
     }
 }
+
+
+// fonction pour calculer le nombre de produit dans notre panier :
+
+function quantitePanier(){
+
+    $nbreProduit = 0;
+
+    if(isset($_SESSION['panier'])){
+    foreach ($_SESSION['panier']['quantite'] as $quantite) {
+
+        $nbreProduit += $quantite;
+        // On va ajouter progressivement dans nbreProduit la quantité commandé pour chaque produit dans le panier. chaque tour de boucle ajoute à nbreProduit la quantité commandée.
+        }
+    }
+
+    if ($nbreProduit != 0) {
+        return $nbreProduit;
+    }else{
+        return false;
+    }
+}
+// Cette fonction va nous permettre d'afficher dans le header, une petite pastille avec le nombre de produit que l'utilisateur a mis dans son panier.
+
+
+// Fonction pour calculer le montant total d'un panier :
+function montantTotal(){
+    $total= 0;
+
+    if (!empty($_SESSION['panier']['id_produit'])) {
+        for($i = 0; $i < sizeof($_SESSION['panier']['id_produit']);  $i++){
+            $total += $_SESSION['panier']['prix'][$i] * $_SESSION['panier']['quantite'][$i];
+        }
+    }
+    if($total != 0){
+        return $total;
+    }
+}
+
+// Fonction pour retirer un produit du panier, en oubliant pas de ré-indéxer tous les éléments du panier
+
+function retirerProduit($id){
+
+    $position_pdt_a_supprimer = array_search($id, $_SESSION['panier']['id_produit']);
+    // $position_pdt_a_supprimer, doit normalement stocker le numéro d'indice du produit que l'on va supprimer; Cet indice va me permettre de supprimer les éléments dans les mini tableaux id_produit, prix, titre, photo, quantite...
+
+    if($position_pdt_a_supprimer !== FALSE){
+        array_splice($_SESSION['panier']['id_produit'], $position_pdt_a_supprimer, 1);
+        array_splice($_SESSION['panier']['quantite'], $position_pdt_a_supprimer, 1);
+        array_splice($_SESSION['panier']['prix'], $position_pdt_a_supprimer, 1);
+        array_splice($_SESSION['panier']['photo'], $position_pdt_a_supprimer, 1);
+        array_splice($_SESSION['panier']['titre'], $position_pdt_a_supprimer, 1);
+    }
+    // array_splice() nous permet de supprimer un éléméent dans un ARRAY et de ré-indexer tous les autres éléments de ménière à ne pas avoir discontinuité dans les indices numérique de notre ARRAY.
+    // Le 3eme argument de array_splice() détermine le nombre d'élément à supprimer et le sens.
+}
