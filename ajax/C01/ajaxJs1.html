@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="personne">Guillaume</div>
+  <div id="resultat"></div>
+
+  <script>
+      r = new XMLHttpRequest();
+
+      var personne = document.getElementById("personne");
+      personne = personne.innerHTML;
+      console.log(personne); // on contrôle que la variable personne contient le prénom contenu dans la div
+
+      var parameters = "personne="+ personne;
+
+      r.open("POST", "ajaxJs1.php", true); // on prépare le fichier PHP afin d'envoyer le prenom dont on souhaite afficher les informations
+      r.setRequestHeader("Content-type", "application/x-www-form-urlencoded")//La methode setRequestHeader() définit la valeur d'un en tête de requête HTTP.
+
+      r.send(parameters); // on envoie les paramètres au fichier ajaxJs1.php
+
+      r.onreadystatechange = function(){
+          if(r.readyState == 4 && r.status == 200){
+              var obj = JSON.parse(r.responseText);
+              console.info(obj);
+              document.getElementById("resultat").innerHTML = obj.monresultat;
+          }
+      }
+  </script>
+</body>
+</html>
