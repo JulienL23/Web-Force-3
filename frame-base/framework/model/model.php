@@ -2,6 +2,9 @@
 
 class Model
 {
+    // Au moment de l'instanciation, on va se connecter à la BDD (new PDO), grace aus infos stocker dans $user, $database et dans $password.
+    // On en profite également pour enregistrer dans $table le nom de la table à interroger et dans $pdo notre connexion à la BDD.
+
     public $pdo;
     public $table;
     public $attributes = [];
@@ -16,6 +19,10 @@ class Model
         $this->table = $table;
     }
 
+    // __set et __get sont des méthodes magiques qui permettent de récupérer les infos liées à l'affectation ou à l'utilisation de variable s n'exsistant pas ou créés à la vollées (prenom, nom, phone)
+    // puisse que ces variables n'existe pas, on les stockes dans $attributes qui est un array.
+
+
     public function __set($key, $value)
     {
         $this->attributes[$key] = $value;
@@ -28,7 +35,9 @@ class Model
 
     public function save()
     {
-        if($this->is_new){
+        if($this->is_new){ // Si new est TRUE alors on enregistre un contact, sinon on modifie un contact existant.
+
+            // La requete INSERT INTO, va récupérer toutes les variables créées à la volés et stockées dans la variable $ attributes, pour en faire une requete dynamique. Pour que cela fonctionne il faut absolument que les name des champs du formulaire correspondent aux names des champs dans la BDD.
             $query = 'INSERT INTO '
              . $this->table
              . ' ('
